@@ -6,10 +6,11 @@ import AuthLayout from './_auth/AuthLayout';
 import SigninForm from './_auth/forms/SigninForm';
 import Home from './_root/pages/Home';
 import RootLayout from './_root/RootLayout';
+import { Toaster } from "@/components/ui/toaster"
 
 const App = () => {
   return (
-    <h1 className="flex h-screen">
+    <main className="flex h-screen">
       <Routes>
         {/* Public routes */}
         <Route element={<AuthLayout/>}>
@@ -21,7 +22,9 @@ const App = () => {
         <Route element={<RootLayout/>}/>
         <Route index element={<Home/>}/>
       </Routes>
-    </h1>   
+      <Toaster/>
+    </main>  
+    
   );
 };
 
